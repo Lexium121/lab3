@@ -1,0 +1,28 @@
+{
+  "name": "file-stats",
+  "displayName": "File Stats",
+  "description": "Статистика текущего файла в строке состояния и вставка шапки с автором",
+  "version": "1.0.0",
+  "publisher": "bakhmutov",
+  "license": "MIT",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "fileStats.show", "title": "File Stats: Показать статистику файла" },
+      { "command": "fileStats.insertHeader", "title": "File Stats: Вставить шапку с автором" }
+    ],
+    "configuration": {
+      "title": "File Stats",
+      "properties": {
+        "fileStats.author": {
+          "type": "string",
+          "default": "Бахмутов Александр, М3111",
+          "description": "Автор для шапки файла"
+        }
+      }
+    }
+  }
+}
